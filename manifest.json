@@ -1,0 +1,22 @@
+{
+  "name": "Links to Jira Tickets in Slack",
+  "short_name": "Slack Links",
+  "version": "1.0.0",
+  "manifest_version": 1,
+  "description": "Creates hyperlinks to JIRA tickets in Slack.",
+  "homepage_url": "https://git.lo/augustin/slack-links",
+  "browser_action": {
+    "default_title": "Slack links to Jira tickets"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.slack.com/*"
+      ],
+      "js": [
+        "js/jquery.min.js",
+        "src/main.js"
+      ]
+    }
+  ]
+}
